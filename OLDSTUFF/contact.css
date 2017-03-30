@@ -1,0 +1,65 @@
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{ 
+    font: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-align: center;
+    background-image: url(images/banner.png);    
+}
+
+.magentaaa{
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    vertical-align: middle;
+}
+
+.blended_grid{
+display : block;
+width : 1000px;
+margin : 50px auto 0 auto;
+}
+.pageHeader{
+background-color : yellow;
+float : left;
+clear : none;
+height : 200px;
+width : 1000px;
+}
+
+.pageContent{
+background-color : smokewhite;
+float : left;
+clear : none;
+height : 600px;
+width : 1000px;
+}
+
+.tg  {
+	border-collapse:collapse;
+	border-spacing:0;
+	}
+.tg td{
+	font-family:Arial, sans-serif;
+	font-size:14px;
+	padding:10px 20px;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	}
+	
+.tg th{
+	font-family:Arial, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	padding:10px 20px;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	}
+.tg .tg-yw4l{
+	vertical-align:top;
+	}
