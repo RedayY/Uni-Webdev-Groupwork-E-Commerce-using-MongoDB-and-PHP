@@ -65,10 +65,13 @@ color="CornflowerBlue">A</font><font color="white">dmin</font> <font color="Corn
 
 <a style="text-decoration:none;" href="mailto:sobol199@wp.pl"><font color="CornflowerBlue">C</font><font color="white">ontact</font></a> - 
 
-<a style="text-decoration:none;"  href="Products.php"><font color="CornflowerBlue">P</font><font color="white">roducts <font color="CornflowerBlue">B</font>ikes</font></a> -
+<a style="text-decoration:none;"  href="Products.php"><font color="CornflowerBlue">P</font><font color="white">roducts
+        <font color="CornflowerBlue">B</font>ikes</font></a> -
+
+    <a style="text-decoration:none;" href="member.php"><font color="CornflowerBlue">M</font><font color="white">embers Area</font></a> -
 
 
-<!-- Horizontal navigation - Right side -->
+    <!-- Horizontal navigation - Right side -->
 
 <th><div align="center"><a style="text-decoration:none;" href="basket.html"><font color="CornflowerBlue">B</font><font color="white">asket</font></a> -
 

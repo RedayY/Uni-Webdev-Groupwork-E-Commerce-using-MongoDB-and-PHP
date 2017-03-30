@@ -109,6 +109,74 @@ $postcode = $_SESSION['Postcode'];
                     echo $postcode , "</br>";
                     ?>
 
+                <br>
+
+                <div style ="border: 2px groove aqua;">
+                    </br>
+                    <h1>Previous Orders</h1>
+                    </br>
+
+                    <?PHP
+                    // I am legit sick and tired of inline css please
+                    // jacek use external or learn it also most of ur html tags are garbage
+
+                    // establish connection
+                    $mongoClient = new MongoClient();
+                    $db = $mongoClient->Orders;
+                    $collection = $db->Order_req;
+
+                    //query
+
+                    $query = array("Firstname" => $fname);
+
+                    //Mongo DB Cursor obj
+                    $mdbc = $db->Order_req->find($query);
+                    ?>
+
+
+                    <table style="border: groove 2px darkblue">
+                        <tr>
+                            <th style="background: #FFFFFF;">Firstname</th>
+                            <th style="background: #FFFFFF;">Lastname</th>
+                            <th style="background: #FFFFFF;">Address</th>
+                            <th style="background: #FFFFFF;">Postcode</th>
+                            <th style="background: #FFFFFF;">Products</th>
+                            <th style="background: #FFFFFF;">and Quantities</th>
+                        </tr>
+                        <?php
+                        foreach($mdbc as $doc)        {
+                            ?>
+                            <tr>
+                            <td style="background: #FFFFFF;"><?php echo $doc['Firstname']; ?></td>
+                            <td style="background: #FFFFFF;"><?php echo $doc['Lastname']; ?></td>
+                            <td style="background: #FFFFFF;"><?php echo $doc['Address']; ?></td>
+                            <td style="background: #FFFFFF;"><?php echo $doc['Postcode']; ?></td>
+
+                            <?php
+                            //I stored an object into the array gotta do some fiddeling for output
+
+                            foreach ($doc{'Order_Items'} as $key => $value) { ?>
+                                <td style="background: #FFFFFF;"><?php echo $key ?> : <?php echo $value?></td>
+                                <?php
+                            }
+                            ?></tr><?php
+                        }
+                        ?>
+                        </tr>
+                    </table>
+
+                    <?php
+                    // Closing Connection
+                    $mongoClient->close();
+                    ?>
+                </div>
+
+
+
+
+
+
+
             </br>
                 <h1>Warning: If you decide to update details you will be automatically logged out and have to log back in</h1>
                 </br>
